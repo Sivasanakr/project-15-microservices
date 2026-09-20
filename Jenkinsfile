@@ -6,10 +6,7 @@ pipeline {
 
         AWS_REGION = 'ap-south-1'
 
-        AWS_ACCOUNT_ID = sh(
-            script: "aws sts get-caller-identity --query Account --output text",
-            returnStdout: true
-        ).trim()
+        AWS_ACCOUNT_ID = '384875139880'
 
         ECR_REGISTRY = "${AWS_ACCOUNT_ID}.dkr.ecr.ap-south-1.amazonaws.com"
 
